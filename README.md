@@ -1,13 +1,10 @@
 # Project Name
 
-> Project description
+> FRBO (copy of VRBO.com)
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/hrr37-scruffy-7
 
 ## Table of Contents
 
