@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('../database/index');
 const mongoose = require('mongoose');
+var router = require('express').Router();
 
 const app = express();
 
@@ -10,8 +11,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '../public'));
-
+app.use(express.static('public'));
+//__dirname +
 //testing connection
 // app.get('/', function(req, res) {
 //   res.send('Hello World');
@@ -19,10 +20,12 @@ app.use(express.static(__dirname + '../public'));
 
 //regular get request with 23958457
 //imageId: 23958457
-app.get('/image/23958457', (req, res)=> {
+app.get('/images/23958457', (req, res)=> {
+  //console.log(req.params.id)
   db.find({imageId: 23958457}, (err, images) =>{
-    if (!err){
-      res.send(images);
+    console.log('***** server index.js', images);
+    if (!err) {
+      res.send (images);
     } else {
       console.log('error with get');
     }
