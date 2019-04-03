@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Axios from 'axios';
+import axios from 'axios';
 import Card from './Card.jsx';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 class App extends React.Component {
@@ -32,23 +32,25 @@ class App extends React.Component {
           property: results.data[0]
         });
         console.log(results.data);
-        console.log(results.data[0]);
       });
+    // nextProperty();
+    // prevProperty();
   }
 
-  nextProperty(e) {
+  nextProperty (){
     const newIndex = this.state.property.imageIndex + 1;
     this.setState({
       property: properties[newIndex]
     });
-    console.log(properties[newIndex]);
+    console.log("nextProperty is clickable");
   }
 
-  prevProperty(e) {
+  prevProperty(){
     const newIndex = this.state.property.imageIndex - 1;
     this.setState({
       property: properties[newIndex]
     });
+    console.log("prevProperty is clickable");
   }
 
   render () {
@@ -74,11 +76,11 @@ class App extends React.Component {
         </div>
         <div>
           <button
-            onClick={() => this.prevProperty()}
+            onClick={this.prevProperty}
             disabled={property.imageIndex === 1}
           >Prev</button>
           <button
-            onClick={() => this.nextProperty()}
+            onClick={this.nextProperty}
             disabled={property.imageIndex === properties.length}
           >Next</button>
         </div>
