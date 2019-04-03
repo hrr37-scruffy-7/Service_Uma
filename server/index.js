@@ -3,11 +3,13 @@ const bodyParser = require('body-parser');
 const db = require('../database/index');
 const mongoose = require('mongoose');
 var router = require('express').Router();
+let cors = require('cors')
 
 const app = express();
 
 // mongoose.connect('localhost:5002');
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

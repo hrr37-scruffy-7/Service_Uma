@@ -1,9 +1,9 @@
 {
   "name": "FRBO",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "version": "1.0.0",
+  "description": "Copy of VRBO item page",
+  "author": "Uma Abrami, Sonu Sandhu",
+  "license": "UNLICENSED",
   "engines": {
     "node": ">=6.13.0"
   },
@@ -12,20 +12,28 @@
     "start:dev": "nodemon server/index.js -w database -w server",
     "seed": "node database/seeder.js",
     "mockseed": "node database/mockDataseeder.js",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "@babel/polyfill": "^7.4.3",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "enzyme": "^3.9.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "mongodb": "^3.2.2",
     "mongoose": "^5.4.20",
     "nodemon": "^1.18.10",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
@@ -36,5 +44,9 @@
     "mongoose": "^5.4.20",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr37-scruffy-7.git"
   }
 }
