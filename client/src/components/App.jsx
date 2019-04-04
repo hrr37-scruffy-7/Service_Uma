@@ -21,7 +21,7 @@ class App extends React.Component {
         imageId: 678910,
         imageIndex: 1
       },
-      currentIndex: 1
+      currentIndex: 0
     };
     this.nextProperty = this.nextProperty.bind(this);
     this.prevProperty = this.prevProperty.bind(this);
@@ -41,41 +41,39 @@ class App extends React.Component {
   }
 
   nextProperty(){
-    const newIndex = this.state.property.imageIndex + 1;
-    this.setState(state => ({
-      property: this.state.properties[newIndex]
-    })
-    );
-    console.log("nextProperty is clickable");
+    this.setState((state) => ({
+      currentIndex: this.state.currentIndex + 1,
+      property: this.state.properties[this.state.currentIndex]
+    }));
+    console.log(this.state.currentIndex);
   }
 
   prevProperty(){
-    const newIndex = this.state.property.imageIndex - 1;
-    this.setState(state => ({
-      property: this.state.properties[newIndex]
-    })
-    );
-    console.log("prevProperty is clickable");
+    this.setState((state) => ({
+      currentIndex: this.state.currentIndex - 1,
+      property: this.state.properties[this.state.currentIndex]
+    }));
+    console.log(this.state.currentIndex);
   }
 
   render () {
-    const {properties, property} = this.state;
+    const {properties, property, currentIndex} = this.state;
     return (
       <div className="App">
         <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--prev btn-icon-circle" aria-label="Previous" label type="button"
           onClick={() => this.prevProperty()}
-          disabled={property.imageIndex === 1}
+          disabled={currentIndex === 0}
         > prev </button>
         <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--next btn-icon-circle" label="Next" label type="button"
           onClick={() => this.nextProperty()}
-          disabled={property.imageIndex === properties.length}
+          disabled={currentIndex === properties.length-1}
         > next </button>
         <div className="photo-gallery">
           <div className = "page">
             <div className="col">
-              <div className={`cards-slider active-slide-${property.imageIndex}`}>
+              <div className={`cards-slider active-slide-${currentIndex}`}>
                 <div className="cards-slider-wrapper" style={{
-                  'transform': `translateX(-${property.imageIndex * (100 / properties.length)}%)`
+                  'transform': `translateX(-${currentIndex * (100 / properties.length)}%)`
                 }}>
                   {
                     properties.map(property => <Card key={property._id} property={property} />)
