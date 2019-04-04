@@ -11,6 +11,149 @@
   padding: 30px 0;
   background-color: #222; }
 
+.btn-overlay:focus, .btn-overlay:hover {
+    background-color: rgba(0,0,0,.8);
+    border-color: transparent;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn {
+  min-height: 48px;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+  border-radius: 100px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.ButtonIcon {
+  line-height: 0!important;
+}
+
+.carousel-desktop__nav {
+  position: static;
+}
+
+.btn-icon-circle {
+  border-radius: 50%;
+}
+
+.btn-icon {
+  border-radius: 4px;
+}
+
+.btn-icon, .btn-icon-circle {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0;
+}
+
+.btn-overlay {
+  border-radius: 100px;
+  background-color: rgba(0,0,0,.7);
+  border-color: transparent;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  line-height: 24px;
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(3px);
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button {
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button, select {
+  text-transform: none;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-width: 1px;
+  padding: 1px 7px 2px;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: buttontext;
+  background-color: buttonface;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 400 11px system-ui;
+}
 
 section {
   padding: 20px 0;
