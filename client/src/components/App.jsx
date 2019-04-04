@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Card from './Card.jsx';
+// import Button from './Button.jsx';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+// import '../../../public/styles.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +20,8 @@ class App extends React.Component {
         imagePath: 'http://lorempixel.com/640/480/sports',
         imageId: 678910,
         imageIndex: 1
-      }
+      },
+      currentIndex: 1
     };
     this.nextProperty = this.nextProperty.bind(this);
     this.prevProperty = this.prevProperty.bind(this);
@@ -37,28 +40,36 @@ class App extends React.Component {
     // prevProperty();
   }
 
-  nextProperty (){
+  nextProperty(){
     const newIndex = this.state.property.imageIndex + 1;
-    this.setState({
-      property: properties[newIndex]
-    });
+    this.setState(state => ({
+      property: this.state.properties[newIndex]
+    })
+    );
     console.log("nextProperty is clickable");
   }
 
   prevProperty(){
     const newIndex = this.state.property.imageIndex - 1;
-    this.setState({
-      property: properties[newIndex]
-    });
+    this.setState(state => ({
+      property: this.state.properties[newIndex]
+    })
+    );
     console.log("prevProperty is clickable");
   }
 
   render () {
     const {properties, property} = this.state;
     return (
-      // <Router>
-      //   <Route path='/image/:id'>
       <div className="App">
+        <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--prev btn-icon-circle" aria-label="Previous" label type="button"
+          onClick={() => this.prevProperty()}
+          disabled={property.imageIndex === 1}
+        > prev </button>
+        <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--next btn-icon-circle" label="Next" label type="button"
+          onClick={() => this.nextProperty()}
+          disabled={property.imageIndex === properties.length}
+        > next </button>
         <div className="photo-gallery">
           <div className = "page">
             <div className="col">
@@ -74,21 +85,15 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        <div>
-          <button
-            onClick={this.prevProperty}
-            disabled={property.imageIndex === 1}
-          >Prev</button>
-          <button
-            onClick={this.nextProperty}
-            disabled={property.imageIndex === properties.length}
-          >Next</button>
-        </div>
+
       </div>
-      //   </Route>
-      // </Router>
     );
   }
 }
 
 export default App;
+
+
+// <div>
+// {<Button property={this.state.property} properties={this.state.properties} prevProperty={this.prevProperty} nextProperty={this.nextProperty}/>}
+// </div>
