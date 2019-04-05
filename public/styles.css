@@ -209,6 +209,7 @@ section {
   background-color: #f3f3f3;
   padding: 10px;
   max-width: 220px;
+  /* max-height: 220px; */
   text-align: left;
   margin: 0 auto; }
   .card:hover {
@@ -269,15 +270,21 @@ section {
     /* justify-content: center */
     width: 50%;
     height: 120%;
-    background: linear-gradient(to right, white 15%, rgba(255, 255, 255, 0) 100%);
+    /* background: linear-gradient(to right, white 15%, rgba(255, 255, 255, 0) 100%); */
     position: absolute;
     top: 0;
-    left: 0;
+    /* left: 0; */
     z-index: 0 }
+
+  /* .col:before {
+      left: 0;
+      right: auto;
+      background: linear-gradient(to right, white 15%, rgba(255, 255, 255, 0) 100%); }
+
   .col:after {
     left: auto;
     right: 0;
-    background: linear-gradient(to left, white 15%, rgba(255, 255, 255, 0) 100%); }
+    background: linear-gradient(to left, white 15%, rgba(255, 255, 255, 0) 100%); } */
 
 .cards-slider.active-slide-0 #card-0 {
       opacity: 1;
@@ -331,6 +338,56 @@ section {
 .cards-slider.active-slide-10 #card-10 {
   opacity: 1;
   transform: scale(1);
+}
+
+.cards-slider.active-slide-11 #card-11 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cards-slider.active-slide-12 #card-12 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-13 #card-13 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-14 #card-14 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-15 #card-15 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-16 #card-16 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-17 #card-17 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-18 #card-18 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-19 #card-19 {
+opacity: 1;
+transform: scale(1);
+}
+
+.cards-slider.active-slide-20 #card-20 {
+opacity: 1;
+transform: scale(1);
 }
 /* ********************/
 .inline-carousel-container--desktop {

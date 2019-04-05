@@ -10,7 +10,7 @@ Enzyme.configure({adapter: new Adapter()});
 
 test('check if number of db images for 23958457 is correct', () => {
   return axios.get('http://localhost:5002/images/23958457').then(response => {
-    expect(response.data.length).toBe(6);
+    expect(response.data.length).toBe(12);
   });
 });
 
