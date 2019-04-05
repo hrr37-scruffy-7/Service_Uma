@@ -104,14 +104,21 @@ class App extends React.Component {
                     </svg>
                   </span>
 
-
-
                 </button>
               </div>
+              <div className="inline-carousel-container__image-count">
+                <div
+                  className="carousel-page-number-desktop-pdp">
+                  <button
+                    className="btn btn-overlay carousel-page-number-desktop-pdp__view-fullscreen btn-sm" label="pagenumber" type="button" data-selected="true" data-label-id="0">
+                    <span className="btn__label sr-only">`Image ${currentIndex} of ${properties.length}. Click to view fullscreen.`</span>
+                    <div className="carousel-page-number-desktop-pdp__inner-wrapper">
+                      {currentIndex} of {properties.length}
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
-
-
-
           </div>
         </div>
 
@@ -123,6 +130,21 @@ class App extends React.Component {
 export default App;
 
 
-// <div>
+{/* // <div>
 // {<Button property={this.state.property} properties={this.state.properties} prevProperty={this.prevProperty} nextProperty={this.nextProperty}/>}
-// </div>
+// </div> */}
+
+{/* <svg width="16px" height="16px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <symbol id="toast-x" viewBox="0 0 18 18">
+                      <title>xxx</title>
+                      <g transform="translate(1.000000, 1.000000)">
+                        <path d="M0.444444444,0.444444444 L15.5293891,15.5293891">
+                        </path>
+                        <path d="M15.5293891,0.444444444 L0.444444444,15.5293891">
+                        </path>
+                      </g>
+                    </symbol>
+                  </defs>
+                </svg>
+              </div> */}

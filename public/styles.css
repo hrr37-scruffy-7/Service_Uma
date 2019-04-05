@@ -193,13 +193,46 @@ button {
 
 svg:not(:root) {
   overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   transform-origin: 0px 0px;
 }
 
-section {
-  padding: 20px 0;
-  max-width: 600px;
-  margin: 0 auto; }
+.carousel-page-number-desktop-pdp {
+  bottom: 16px;
+  left: 16px;
+  position: absolute;
+  z-index: 1;
+  user-select: none;
+  transition: bottom 0s,z-index 0s,opacity .3s ease-in-out .3s;
+}
+
+.carousel-page-number-desktop-pdp .btn-overlay {
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.carousel-page-number-desktop-pdp__fullscreen-svg {
+  display: inline-block;
+  margin-left: 16px;
+  position: relative;
+  left: 5px;
+}
+
+.btn-sm {
+  min-height: 40px;
+}
+
+.btn {
+  min-height: 48px;
+}
+
+.btn-sm {
+  padding: 11px 28px;
+  font-size: .875rem;
+  line-height: 18px;
+}
 
 .card {
   border: 3px #f3f3f3 solid;
@@ -400,6 +433,12 @@ transform: scale(1);
   position: relative;
 }
 
+.inline-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
 /* div {
   display: block;
 } */
@@ -439,3 +478,26 @@ transform: scale(1);
   width: 50px;
   z-index: 1;
 }
+
+
+/* .toaster.is-bottom {
+  bottom: 30px;
+  top: auto;
+}
+
+@media (min-width: 480px)
+.toaster {
+  width: 90%;
+}
+
+.toaster {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 0 20px;
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  z-index: 1050;
+} */
