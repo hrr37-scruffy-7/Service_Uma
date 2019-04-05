@@ -418,14 +418,14 @@ transform: scale(1);
 
 .carousel-desktop__nav-wrapper--prev {
   /* left: 300px; */
-  left: 35%;
+  left: 30%;
   margin-left: -120px;
 }
 
 
 .carousel-desktop__nav-wrapper--next {
   /* right: 300px; */
-  right: 35%;
+  right: 30%;
   margin-right: -120px;
 }
 

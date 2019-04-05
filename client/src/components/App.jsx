@@ -23,12 +23,27 @@ class App extends React.Component {
       },
       currentIndex: 0
     };
-    this.nextProperty = this.nextProperty.bind(this);
-    this.prevProperty = this.prevProperty.bind(this);
+    // this.getAssocPics = this.getAssocPics.bind(this);
   }
 
+
+
+  // getAssocPics(id){
+  //    return axios.get(`/images/${id}`)
+  //       .then((results) => {
+  //         this.setState({
+  //           properties: results.data,
+  //           property: results.data[0]
+  //         });
+  //         console.log(results.data);
+  //       });
+  // }
+  // componentDidMount () {
+  //   this.getAssocPics({props.id});
+  // }
   componentDidMount () {
-    axios.get('/images/23958457')
+    const id = '23958457';
+    axios.get(`/images/${id}`)
       .then((results) => {
         this.setState({
           properties: results.data,
@@ -36,34 +51,6 @@ class App extends React.Component {
         });
         console.log(results.data);
       });
-    // nextProperty();
-    // prevProperty();
-  }
-
-  nextProperty(e){
-    this.forceUpdate();
-    e.preventDefault();
-    if (!e) {var e = window.event; }
-    e.cancelBubble = true;
-    if (e.stopPropagation) {e.stopPropagation(); }
-    this.setState((state) => ({
-      currentIndex: this.state.currentIndex + 1,
-      property: this.state.properties[this.state.currentIndex]
-    }));
-    console.log(this.state.currentIndex);
-  }
-
-  prevProperty(e) {
-    this.forceUpdate();
-    e.preventDefault();
-    if (!e) {var e = window.event; }
-    e.cancelBubble = true;
-    if (e.stopPropagation) {e.stopPropagation(); }
-    this.setState((state) => ({
-      currentIndex: this.state.currentIndex - 1,
-      property: this.state.properties[this.state.currentIndex]
-    }));
-    console.log(this.state.currentIndex);
   }
 
   render () {
