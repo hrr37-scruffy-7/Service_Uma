@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const db = require('../database/index');
 const mongoose = require('mongoose');
 var router = require('express').Router();
-let cors = require('cors')
+let cors = require('cors');
 
 const app = express();
 
@@ -22,9 +22,9 @@ app.use(express.static('public'));
 
 //regular get request with 23958457
 //imageId: 23958457
-app.get('/images/23958457', (req, res)=> {
-  //console.log(req.params.id)
-  db.find({imageId: 23958457}, (err, images) =>{
+app.get('/images/:id', (req, res)=> {
+  console.log(req.params.id);
+  db.find({imageId: req.params.id}, (err, images) =>{
     console.log('***** server index.js', images);
     if (!err) {
       res.send (images);

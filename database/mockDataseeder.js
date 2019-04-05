@@ -7,14 +7,15 @@
 // var images = [];
 // var imageId = 23958457;
 
-// for (let i = 0; i < 1; i++) {
+// for (let i = 0; i < 100; i++) {
 //   imageId++;
-//   for (let j = 0; j < 10; j++) {
+//   var limit = Math.floor(Math.random() * 20);
+//   for (let j = 0; j < limit; j++) {
 //     images.push (
 //       new Image({
 //         imagePath: faker.random.image(),
 //         imageId: imageId,
-//         imageIndex: j + 1
+//         imageIndex: j
 //       })
 //     );
 //   }
