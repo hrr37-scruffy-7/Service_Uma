@@ -199,9 +199,13 @@ svg:not(:root) {
 }
 
 .carousel-page-number-desktop-pdp {
-  bottom: 16px;
+  /* bottom: 16px; */
+  /* bottom: 16px;
   left: 16px;
-  position: absolute;
+  position: center; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end
   z-index: 1;
   user-select: none;
   transition: bottom 0s,z-index 0s,opacity .3s ease-in-out .3s;
@@ -457,15 +461,15 @@ transform: scale(1);
 
 .carousel-desktop__nav-wrapper--prev {
   /* left: 300px; */
-  left: 30%;
-  margin-left: -120px;
+  left: 50%;
+  margin-left: -225px;
 }
 
 
 .carousel-desktop__nav-wrapper--next {
   /* right: 300px; */
-  right: 30%;
-  margin-right: -120px;
+  right: 50%;
+  margin-right: -225px;
 }
 
 .carousel-desktop__nav-wrapper {

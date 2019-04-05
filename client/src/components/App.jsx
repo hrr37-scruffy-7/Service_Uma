@@ -111,9 +111,9 @@ class App extends React.Component {
                   className="carousel-page-number-desktop-pdp">
                   <button
                     className="btn btn-overlay carousel-page-number-desktop-pdp__view-fullscreen btn-sm" label="pagenumber" type="button" data-selected="true" data-label-id="0">
-                    <span className="btn__label sr-only">`Image ${currentIndex} of ${properties.length}. Click to view fullscreen.`</span>
+                    <span className="btn__label sr-only">`Image ${currentIndex + 1} of ${properties.length}. Click to view fullscreen.`</span>
                     <div className="carousel-page-number-desktop-pdp__inner-wrapper">
-                      {currentIndex} of {properties.length}
+                      {currentIndex + 1} of {properties.length}
                     </div>
                   </button>
                 </div>
