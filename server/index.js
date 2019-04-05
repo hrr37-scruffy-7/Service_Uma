@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const db = require('../database/index');
 const mongoose = require('mongoose');
 var router = require('express').Router();
-let cors = require('cors')
+let cors = require('cors');
 
 const app = express();
 

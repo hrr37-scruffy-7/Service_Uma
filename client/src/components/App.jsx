@@ -40,7 +40,12 @@ class App extends React.Component {
     // prevProperty();
   }
 
-  nextProperty(){
+  nextProperty(e){
+    this.forceUpdate();
+    e.preventDefault();
+    if (!e) {var e = window.event; }
+    e.cancelBubble = true;
+    if (e.stopPropagation) {e.stopPropagation(); }
     this.setState((state) => ({
       currentIndex: this.state.currentIndex + 1,
       property: this.state.properties[this.state.currentIndex]
@@ -48,7 +53,12 @@ class App extends React.Component {
     console.log(this.state.currentIndex);
   }
 
-  prevProperty(){
+  prevProperty(e) {
+    this.forceUpdate();
+    e.preventDefault();
+    if (!e) {var e = window.event; }
+    e.cancelBubble = true;
+    if (e.stopPropagation) {e.stopPropagation(); }
     this.setState((state) => ({
       currentIndex: this.state.currentIndex - 1,
       property: this.state.properties[this.state.currentIndex]
@@ -60,14 +70,8 @@ class App extends React.Component {
     const {properties, property, currentIndex} = this.state;
     return (
       <div className="App">
-        <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--prev btn-icon-circle" aria-label="Previous" label type="button"
-          onClick={() => this.prevProperty()}
-          disabled={currentIndex === 0}
-        > prev </button>
-        <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--next btn-icon-circle" label="Next" label type="button"
-          onClick={() => this.nextProperty()}
-          disabled={currentIndex === properties.length-1}
-        > next </button>
+
+
         <div className="photo-gallery">
           <div className = "page">
             <div className="col">
@@ -80,7 +84,47 @@ class App extends React.Component {
                   }
                 </div>
               </div>
+              <div className="carousel-desktop__nav-wrapper carousel-desktop__nav-wrapper--prev">
+                <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--prev btn-icon-circle" label="Previous" label type="button"
+                  property={this.state.property}
+                  onClick={() => this.setState((state) => ({
+                    currentIndex: this.state.currentIndex - 1,
+                    property: this.state.properties[this.state.currentIndex]
+                  }))}
+                  disabled={currentIndex === 0}
+                >
+                  <span className="btn__label sr-only"></span>
+                  <span className="SVGIcon     SVGIcon--16px flex-center">
+                    <svg width="16px" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg"> ==$0
+                      <path fill="none" strokeLinecap="round" strokeLinejoin="round" d="M10 13L5.4 8 10 3"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div className="carousel-desktop__nav-wrapper carousel-desktop__nav-wrapper--next">
+                <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--next btn-icon-circle" label="Next" label type="button"
+                  property={this.state.property}
+                  onClick={() => this.setState((state) => ({
+                    currentIndex: this.state.currentIndex + 1,
+                    property: this.state.properties[this.state.currentIndex]
+                  }))}
+                  disabled={currentIndex === properties.length-1}
+                >
+                  <span className="btn__label sr-only"></span>
+                  <span className="SVGIcon     SVGIcon--16px flex-center">
+                    <svg width="16px" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg"> ==$0
+                      <path fill="none" strokeLinecap="round" strokeLinejoin="round" d="M6 13l4.6-5L6 3"></path>
+                    </svg>
+                  </span>
+
+
+
+                </button>
+              </div>
             </div>
+
+
+
           </div>
         </div>
 
