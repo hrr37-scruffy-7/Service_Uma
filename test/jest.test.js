@@ -16,5 +16,5 @@ test('check if number of db images for 23958457 is correct', () => {
 
 test('if there is a button element', () => {
   const wrapper = mount(<App />);
-  expect(wrapper.find('button')).toHaveLength(2);
+  expect(wrapper.find('button')).toHaveLength(3);
 });
