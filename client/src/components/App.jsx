@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Card from './Card.jsx';
-// import Button from './Button.jsx';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-// import '../../../public/styles.css';
+import styled, { css } from 'styled-components';
+//
+const SliderStyle = styled.div`
+  transform: ${props => `translateX(-${props.currentIndex * (100 / props.properties.length)}%)`};
+  `;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +56,7 @@ class App extends React.Component {
       });
   }
 
+
   render () {
     const {properties, property, currentIndex} = this.state;
     return (
@@ -63,16 +67,14 @@ class App extends React.Component {
           <div className = "page">
             <div className="col">
               <div className={`cards-slider active-slide-${currentIndex}`}>
-                <div className="cards-slider-wrapper" style={{
-                  'transform': `translateX(-${currentIndex * (100 / properties.length)}%)`
-                }}>
+                <SliderStyle className="cards-slider-wrapper" properties={properties} currentIndex={currentIndex}>
                   {
                     properties.map(property => <Card key={property._id} property={property} />)
                   }
-                </div>
+                </SliderStyle>
               </div>
               <div className="carousel-desktop__nav-wrapper carousel-desktop__nav-wrapper--prev">
-                <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--prev btn-icon-circle" label="Previous" label type="button"
+                <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--prev btn-icon-circle"
                   property={this.state.property}
                   onClick={() => this.setState((state) => ({
                     currentIndex: this.state.currentIndex - 1,
@@ -89,13 +91,13 @@ class App extends React.Component {
                 </button>
               </div>
               <div className="carousel-desktop__nav-wrapper carousel-desktop__nav-wrapper--next">
-                <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--next btn-icon-circle" label="Next" label type="button"
+                <button className="btn btn-icon ButtonIcon btn-overlay carousel-desktop__nav- carousel-desktop__nav--next btn-icon-circle"
                   property={this.state.property}
                   onClick={() => this.setState((state) => ({
                     currentIndex: this.state.currentIndex + 1,
                     property: this.state.properties[this.state.currentIndex]
                   }))}
-                  disabled={currentIndex === properties.length-1}
+                  disabled={currentIndex === properties.length - 1}
                 >
                   <span className="btn__label sr-only"></span>
                   <span className="SVGIcon     SVGIcon--16px flex-center">
@@ -110,7 +112,7 @@ class App extends React.Component {
                 <div
                   className="carousel-page-number-desktop-pdp">
                   <button
-                    className="btn btn-overlay carousel-page-number-desktop-pdp__view-fullscreen btn-sm" label="pagenumber" type="button" data-selected="true" data-label-id="0">
+                    className="btn btn-overlay carousel-page-number-desktop-pdp__view-fullscreen btn-sm" type="button" data-selected="true">
                     <span className="btn__label sr-only">`Image ${currentIndex + 1} of ${properties.length}. Click to view fullscreen.`</span>
                     <div className="carousel-page-number-desktop-pdp__inner-wrapper">
                       {currentIndex + 1} of {properties.length}
@@ -147,4 +149,11 @@ export default App;
                     </symbol>
                   </defs>
                 </svg>
-              </div> */}
+              </div>
+
+                            // style={{
+                //   'transform': `translateX(-${currentIndex * (100 / properties.length)}%)`
+
+                // }}
+
+            */}
