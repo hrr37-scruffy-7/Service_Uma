@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Card from './Card.jsx';
 import styled, { css } from 'styled-components';
-//
+
 const SliderStyle = styled.div`
   transform: ${props => `translateX(-${props.currentIndex * (100 / props.properties.length)}%)`};
   `;
@@ -61,8 +61,9 @@ class App extends React.Component {
     const {properties, property, currentIndex} = this.state;
     return (
       <div className="App">
-
-
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_1_TopBar.png"></img>
+        </div>
         <div className="photo-gallery">
           <div className = "page">
             <div className="col">
