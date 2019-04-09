@@ -210,7 +210,7 @@ svg:not(:root) {
   position: center; */
   display: flex;
   justify-content: center;
-  align-items: flex-end
+  align-items: flex-end;
   z-index: 1;
   user-select: none;
   transition: bottom 0s,z-index 0s,opacity .3s ease-in-out .3s;
