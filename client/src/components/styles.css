@@ -122,7 +122,7 @@
   text-indent: 0px;
   text-shadow: none;
   display: inline-block;
-  text-align: start;
+  /* text-align: start; */
   margin: 0em;
   font: 400 11px system-ui;
   -webkit-writing-mode: horizontal-tb !important;
