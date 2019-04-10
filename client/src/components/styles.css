@@ -100,18 +100,18 @@
 
 .btn {
   text-transform: none;
-  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  /* border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
   border-style: solid;
-  border-width: 1px;
+  border-width: 1px; */
   padding: 1px 7px 2px;
   align-items: flex-start;
   text-align: center;
   cursor: default;
   color: #fff;
-  background-color: #707070;
+  /* background-color: #707070; */
   box-sizing: border-box;
   padding: 2px 6px 3px;
-  border-width: 2px;
+  /* border-width: 2px; */
   border-style: outset;
   border-color: buttonface;
   border-image: initial;
@@ -213,7 +213,7 @@
   cursor: pointer;
   background-color: #f3f3f3;
   padding: 10px;
-  max-width: 220px;
+  max-width: 300px;
   /* max-height: 220px; */
   text-align: left;
   margin: 0 auto; }
@@ -256,7 +256,7 @@
   .cardsSliderWrapper .card {
     flex: 1;
     min-width: 400px;
-    opacity: 0.6;
+    opacity: 1;
     transform: scale(0.92);
     box-shadow: none;
     background-color: white;
@@ -292,106 +292,106 @@
     background: linear-gradient(to left, white 15%, rgba(255, 255, 255, 0) 100%); } */
 
     /* .cardsSliderActiveSlide12 */
-.activeCard0 {
-      opacity: 1;
+.activeCard0#active0 {
+      opacity: 1 !important;
       transform: scale(1);
  }
-.activeCard1 {
-      opacity: 1;
+.activeCard1#active1 {
+      opacity: 1 !important;
       transform: scale(1);
  }
 
-.activeCard2 {
+.activeCard2#active2 {
+  opacity: 1!important;
+  transform: scale(1);
+}
+
+.activeCard3#active3 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard3 {
+.activeCard4#active4 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard4 {
+.activeCard5#active5 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard5 {
+.activeCard6#active6 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard6 {
+.activeCard7#active7 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard7 {
+.activeCard8#active8 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard8 {
+.activeCard9#active9 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard9 {
+.activeCard10#active10 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard10 {
+.activeCard11#active11 {
   opacity: 1;
   transform: scale(1);
 }
 
-.activeCard11 {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.activeCard12 {
+.activeCard12#active12 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard13 {
+.activeCard13#active13 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard14 {
+.activeCard14#active14 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard15 {
+.activeCard15#active15 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard16 {
+.activeCard16#active16 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard17 {
+.activeCard17#active17 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard18 {
+.activeCard18#active18 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard19 {
+.activeCard19#active19 {
 opacity: 1;
 transform: scale(1);
 }
 
-.activeCard20 {
+.activeCard20#active20 {
 opacity: 1;
 transform: scale(1);
 }
