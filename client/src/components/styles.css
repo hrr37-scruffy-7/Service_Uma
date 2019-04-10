@@ -1,6 +1,6 @@
 
 /* General */
-.App {
+.app {
   margin: 0;
   padding: 0 0 100px 0;
   font-family: sans-serif;
@@ -9,15 +9,11 @@
   position: relative; }
 
 /* Nav Buttons */
-.btn-overlay:focus, .btn-overlay:hover {
+.btnOverlay:focus, .btnOverlay:hover {
     background-color: rgba(0,0,0,.8);
     border-color: transparent;
     color: #fff;
     text-decoration: none;
-}
-
-.btn {
-  min-height: 48px;
 }
 
 .btn.focus, .btn:focus, .btn:hover {
@@ -28,6 +24,7 @@
 }
 
 .btn {
+  min-height: 48px;
   position: relative;
   display: inline-block;
   margin-bottom: 0;
@@ -37,7 +34,7 @@
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  border: none;
+  /* border: none; */
   white-space: nowrap;
   border-radius: 100px;
   padding: 12px 32px;
@@ -47,38 +44,40 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  -webkit-appearance: button;
+  cursor: pointer;
 }
 
-.ButtonIcon {
+.buttonIcon {
   line-height: 0!important;
 }
 
-.carousel-desktop__nav {
+.carouselDesktopNav {
   position: static;
 }
 
-.btn-icon-circle {
+.btnIconCircle {
   border-radius: 50%;
 }
 
-.btn-icon {
+.btnIcon {
   border-radius: 4px;
 }
 
-.btn-icon, .btn-icon-circle {
+.btnIcon, .btnIconCircle {
   width: 48px;
   height: 48px;
   line-height: 48px;
   padding: 0;
 }
 
-.btn-overlay {
+.btnOverlay {
   border-radius: 100px;
   background-color: rgba(0,0,0,.7);
   border-color: transparent;
@@ -91,37 +90,19 @@ button, input, select, textarea {
   -webkit-backdrop-filter: blur(3px);
 }
 
-
-button {
-  overflow: visible;
-  overflow-x: visible;
-  overflow-y: visible;
-  -webkit-appearance: button;
-    cursor: pointer;
-}
-
-button, input, optgroup, select, textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-button, select {
-  text-transform: none;
-}
-
 *, :after, :before {
   box-sizing: border-box;
 }
 
-button {
+.btn {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  text-transform: none;
   border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
   border-style: solid;
   border-width: 1px;
   padding: 1px 7px 2px;
-}
-
-button {
   align-items: flex-start;
   text-align: center;
   cursor: default;
@@ -133,9 +114,6 @@ button {
   border-style: outset;
   border-color: buttonface;
   border-image: initial;
-}
-
-button {
   text-rendering: auto;
   color: initial;
   letter-spacing: normal;
@@ -147,19 +125,17 @@ button {
   text-align: start;
   margin: 0em;
   font: 400 11px system-ui;
-}
-button {
   -webkit-writing-mode: horizontal-tb !important;
 }
 
-.btn__label {
+.btnLabel {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -170,7 +146,7 @@ button {
   border: 0;
 }
 
-.flex-center {
+.flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,12 +157,12 @@ button {
 
 /* SVGI Icon */
 
-.SVGIcon--16px {
+.svgIcon16px {
   width: 16px;
   height: 16px;
 }
 
-.SVGIcon {
+.svgIcon {
   display: inline-block;
   stroke-width: 1.5;
   stroke: currentColor;
@@ -203,7 +179,7 @@ svg:not(:root) {
 
 /* Page Number */
 
-.carousel-page-number-desktop-pdp {
+.carouselPageNumberDesktopPdp {
   /* bottom: 16px; */
   /* bottom: 16px;
   left: 16px;
@@ -216,28 +192,14 @@ svg:not(:root) {
   transition: bottom 0s,z-index 0s,opacity .3s ease-in-out .3s;
 }
 
-.carousel-page-number-desktop-pdp .btn-overlay {
+.carouselPageNumberDesktopPdp .btnOverlay {
   padding: 8px 16px;
   font-size: 16px;
   line-height: 24px;
 }
 
-.carousel-page-number-desktop-pdp__fullscreen-svg {
-  display: inline-block;
-  margin-left: 16px;
-  position: relative;
-  left: 5px;
-}
-
-.btn-sm {
+.btnSm {
   min-height: 40px;
-}
-
-.btn {
-  min-height: 48px;
-}
-
-.btn-sm {
   padding: 11px 28px;
   font-size: .875rem;
   line-height: 18px;
@@ -273,11 +235,11 @@ svg:not(:root) {
     display: block;
     padding: 0 5px; }
 
-.cards-slider {
+.cardsSlider {
   position: relative;
   max-width: 400px;
   margin: 0 auto; }
-  .cards-slider:after {
+  .cardsSlider:after {
     content: '';
     display: block;
     width: 100%;
@@ -287,11 +249,11 @@ svg:not(:root) {
     top: 0;
     left: 0; }
 
-.cards-slider-wrapper {
+.cardsSliderWrapper {
   display: flex;
   position: absolute;
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  .cards-slider-wrapper .card {
+  .cardsSliderWrapper .card {
     flex: 1;
     min-width: 400px;
     opacity: 0.6;
@@ -329,131 +291,129 @@ svg:not(:root) {
     right: 0;
     background: linear-gradient(to left, white 15%, rgba(255, 255, 255, 0) 100%); } */
 
-.cards-slider.active-slide-0 #card-0 {
+    /* .cardsSliderActiveSlide12 */
+#card0 {
       opacity: 1;
       transform: scale(1);
  }
-.cards-slider.active-slide-1 #card-1 {
+#card1 {
       opacity: 1;
       transform: scale(1);
  }
 
- .cards-slider.active-slide-2 #card-2 {
+#card2 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-3 #card-3 {
+#card3 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-4 #card-4 {
+#card4 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-5 #card-5 {
+#card5 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-6 #card-6 {
+#card6 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-7 #card-7 {
+#card7 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-8 #card-8 {
+#card8 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-9 #card-9 {
+#card9 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-10 #card-10 {
+#card10 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-11 #card-11 {
+#card11 {
   opacity: 1;
   transform: scale(1);
 }
 
-.cards-slider.active-slide-12 #card-12 {
+#card12 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-13 #card-13 {
+#card13 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-14 #card-14 {
+#card14 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-15 #card-15 {
+#card15 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-16 #card-16 {
+#card16 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-17 #card-17 {
+#card17 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-18 #card-18 {
+#card18 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-19 #card-19 {
+#card19 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cards-slider.active-slide-20 #card-20 {
+.cardsSliderActiveSlide20#card20 {
 opacity: 1;
 transform: scale(1);
 }
 
-.inline-carousel-container--desktop {
+.inlineCarouselContainerDesktop {
   cursor: pointer;
   height: 512px;
 }
 
-.inline-carousel-container {
+.inlineCarouselContainer {
   height: 270px;
   position: relative;
 }
 
-.inline-svg {
+.inlineSvg {
   display: inline-block;
   width: 1em;
   height: 1em;
 }
 
-/* div {
-  display: block;
-} */
 
-.inline-carousel-container .carousel__listbox, .modal-carousel-container .carousel__listbox {
+.inlineCarouselContainer .carouselListbox, .modalCarouselContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -465,20 +425,20 @@ transform: scale(1);
   transition: opacity .3s ease;
 }
 
-.carousel-desktop__nav-wrapper--prev {
+.carouselDesktopNavWrapperPrev {
   /* left: 300px; */
   left: 50%;
   margin-left: -225px;
 }
 
 
-.carousel-desktop__nav-wrapper--next {
+.carouselDesktopNavWrapperNext {
   /* right: 300px; */
   right: 50%;
   margin-right: -225px;
 }
 
-.carousel-desktop__nav-wrapper {
+.carouselDesktopNavWrapper {
   align-items: center;
   display: flex;
   height: 100%;
@@ -488,27 +448,3 @@ transform: scale(1);
   width: 50px;
   z-index: 1;
 }
-
-/* Toaster, not in use */
-
-/* .toaster.is-bottom {
-  bottom: 30px;
-  top: auto;
-}
-
-@media (min-width: 480px)
-.toaster {
-  width: 90%;
-}
-
-.toaster {
-  display: block;
-  position: fixed;
-  right: 0;
-  top: 0;
-  padding: 0 20px;
-  min-width: 320px;
-  max-width: 400px;
-  width: 100%;
-  z-index: 1050;
-} */
