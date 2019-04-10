@@ -24,6 +24,7 @@
 }
 
 .btn {
+  padding: 1px 7px 2px;
   min-height: 48px;
   position: relative;
   display: inline-block;
@@ -44,6 +45,12 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.buttonInherit {
+  color: inherit;
+  font: inherit;
+  margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -52,10 +59,6 @@
   overflow-y: visible;
   -webkit-appearance: button;
   cursor: pointer;
-}
-
-.buttonIcon {
-  line-height: 0!important;
 }
 
 .carouselDesktopNav {
@@ -67,6 +70,7 @@
 }
 
 .btnIcon {
+  line-height: 0!important;
   border-radius: 4px;
 }
 
@@ -95,9 +99,6 @@
 }
 
 .btn {
-  color: inherit;
-  font: inherit;
-  margin: 0;
   text-transform: none;
   border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
   border-style: solid;
@@ -106,8 +107,8 @@
   align-items: flex-start;
   text-align: center;
   cursor: default;
-  color: buttontext;
-  background-color: buttonface;
+  color: #fff;
+  background-color: #707070;
   box-sizing: border-box;
   padding: 2px 6px 3px;
   border-width: 2px;
@@ -115,7 +116,6 @@
   border-color: buttonface;
   border-image: initial;
   text-rendering: auto;
-  color: initial;
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -170,7 +170,7 @@
   height: 24px;
 }
 
-svg:not(:root) {
+.svg:not(:root) {
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -292,106 +292,106 @@ svg:not(:root) {
     background: linear-gradient(to left, white 15%, rgba(255, 255, 255, 0) 100%); } */
 
     /* .cardsSliderActiveSlide12 */
-#card0 {
+.activeCard0 {
       opacity: 1;
       transform: scale(1);
  }
-#card1 {
+.activeCard1 {
       opacity: 1;
       transform: scale(1);
  }
 
-#card2 {
+.activeCard2 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card3 {
+.activeCard3 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card4 {
+.activeCard4 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card5 {
+.activeCard5 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card6 {
+.activeCard6 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card7 {
+.activeCard7 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card8 {
+.activeCard8 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card9 {
+.activeCard9 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card10 {
+.activeCard10 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card11 {
+.activeCard11 {
   opacity: 1;
   transform: scale(1);
 }
 
-#card12 {
+.activeCard12 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card13 {
+.activeCard13 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card14 {
+.activeCard14 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card15 {
+.activeCard15 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card16 {
+.activeCard16 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card17 {
+.activeCard17 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card18 {
+.activeCard18 {
 opacity: 1;
 transform: scale(1);
 }
 
-#card19 {
+.activeCard19 {
 opacity: 1;
 transform: scale(1);
 }
 
-.cardsSliderActiveSlide20#card20 {
+.activeCard20 {
 opacity: 1;
 transform: scale(1);
 }

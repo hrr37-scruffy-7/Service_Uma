@@ -9,6 +9,10 @@ const SliderStyle = styled.div`
   transform: ${props => `translateX(-${props.currentIndex * (100 / props.properties.length)}%)`};
   `;
 
+// const ButtonPrev = styled.button`
+
+
+//   `;
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +24,7 @@ class App extends React.Component {
         imageId: 12345,
         imageIndex: 0
       }, {
-        _id: '123333',
+        _id: '123334',
         imagePath: 'http://lorempixel.com/640/480/animals',
         imageId: 12345,
         imageIndex: 1
@@ -80,7 +84,7 @@ class App extends React.Component {
         <div>
           <div>
             <div className={styles.col}>
-              <div className={styles.cardsSlider}>
+              <div className={`${styles.cardsSlider} ${[styles.activeCard, currentIndex].join('')}`}>
                 <SliderStyle
                   className={styles.cardsSliderWrapper}
                   properties={properties}
@@ -90,29 +94,27 @@ class App extends React.Component {
                   }
                 </SliderStyle>
               </div>
-              <div classNames={`${styles.carouselDesktopNavWrapper} ${styles.carouselDesktopNavWrapperPrev}`}>
-                <button classNames={`
-                ${styles.btn} ${styles.btnIcon} ${styles.buttonIcon} ${styles.btnOverlay} ${styles.carouselDesktopNav} ${styles.btnIconCircle}
-                `}
-                property={this.state.property}
-                onClick={() => this.setState((state) => ({
-                  currentIndex: this.state.currentIndex - 1,
-                  property: this.state.properties[this.state.currentIndex]
-                }))}
-                disabled={currentIndex === 0}
+              <div className={`${styles.carouselDesktopNavWrapper} ${styles.carouselDesktopNavWrapperPrev}`}>
+                <button className={[styles.btn, styles.btnIcon, styles.btnOverlay, styles.buttonInherit, styles.carouselDesktopNav, styles.btnIconCircle].join(' ')}
+                  property={this.state.property}
+                  onClick={() => this.setState((state) => ({
+                    currentIndex: this.state.currentIndex - 1,
+                    property: this.state.properties[this.state.currentIndex]
+                  }))}
+                  disabled={currentIndex === 0}
                 >
-                  <span classNames={`${styles.btnLabel} ${styles.srOnly}`}>
+                  <span className={`${styles.btnLabel} ${styles.srOnly}`}>
                   </span>
-                  <span classNames={`${styles.svgIcon} ${styles.svgIcon16px} ${styles.flexCenter}
+                  <span className={`${styles.svgIcon} ${styles.svgIcon16px} ${styles.flexCenter}
                     `}>
-                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg"> ==$0
+                    <svg className={styles.svg} width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg"> ==$0
                       <path fill="none" strokeLinecap="round" strokeLinejoin="round" d="M10 13L5.4 8 10 3"></path>
                     </svg>
                   </span>
                 </button>
               </div>
-              <div classNames={`${styles.carouselDesktopNavWrapper} ${styles.carouselDesktopNavWrapperNext}`}>
-                <button classNames={`${styles.btn} ${styles.btnIcon} ${styles.buttonIcon} ${styles.btnOverlay} ${styles.carouselDesktopNav} ${styles.btnIconCircle}`}
+              <div className={`${styles.carouselDesktopNavWrapper} ${styles.carouselDesktopNavWrapperNext}`}>
+                <button className={`${styles.btn} ${styles.btnIcon} ${styles.buttonIcon} ${styles.buttonInherit} ${styles.btnOverlay} ${styles.carouselDesktopNav} ${styles.btnIconCircle}`}
                   property={this.state.property}
                   onClick={() => this.setState((state) => ({
                     currentIndex: this.state.currentIndex + 1,
@@ -120,20 +122,20 @@ class App extends React.Component {
                   }))}
                   disabled={currentIndex === properties.length - 1}
                 >
-                  <span classNames={`${styles.btnLabel} ${styles.srOnly}`}>
+                  <span className={`${styles.btnLabel} ${styles.srOnly}`}>
                   </span>
-                  <span classNames={`${styles.svgIcon} ${styles.svgIcon16px} ${styles.flexCenter}
+                  <span className={`${styles.svgIcon} ${styles.svgIcon16px} ${styles.flexCenter}
                     `}>
-                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg"> ==$0
+                    <svg className={styles.svg}width="16" height="16" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg"> ==$0
                       <path fill="none" strokeLinecap="round" strokeLinejoin="round" d="M6 13l4.6-5L6 3"></path>
                     </svg>
                   </span>
                 </button>
               </div>
-              <div>
+              <div className={styles.inlineCarouselContainer}>
                 <div
                   className={styles.carouselPageNumberDesktopPdp}>
-                  <button classNames={`${styles.btn} ${styles.btnOverlay} ${styles.carouselPageNumberDesktopPdp} ${styles.btnSm}`}
+                  <button className={`${styles.btn} ${styles.btnOverlay} ${styles.carouselPageNumberDesktopPdp} ${styles.btnSm}`}
                     type="button"
                     data-selected="true">
                     <span className={`${styles.btnLabel} ${styles.srOnly}`}>`Image ${currentIndex + 1} of ${properties.length}.`</span>
