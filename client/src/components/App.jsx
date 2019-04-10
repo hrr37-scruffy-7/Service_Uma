@@ -45,8 +45,14 @@ class App extends React.Component {
   //   this.getAssocPics({props.id});
   // }
   componentDidMount () {
-    const id = '23958457';
-    axios.get(`/images/${id}`)
+    const id = window.location.pathname.slice(1);
+
+    axios.get(`http://localhost:5002/${id}`)
+      .then((results) => {
+        console.log(results.data);
+      });
+
+    axios.get(`http://localhost:5002/images/${id}`)
       .then((results) => {
         this.setState({
           properties: results.data,

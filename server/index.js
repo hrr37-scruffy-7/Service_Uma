@@ -20,8 +20,13 @@ app.use(express.static('public'));
 //   res.send('Hello World');
 // });
 
-//regular get request with 23958457
-//imageId: 23958457
+//Get request for html page to render
+app.get('/:id', (req, res)=> {
+  console.log(req.params.id);
+  res.sendFile('/Users/umaabrami/desktop/hrr37/hrr37-FEC/Service_Uma/public/index.html');
+});
+
+//Get request to get database images based on id
 app.get('/images/:id', (req, res)=> {
   console.log(req.params.id);
   db.find({imageId: req.params.id}, (err, images) =>{
@@ -33,7 +38,6 @@ app.get('/images/:id', (req, res)=> {
     }
   });
 });
-
 
 const PORT = 5002;
 app.listen(PORT, () => {
