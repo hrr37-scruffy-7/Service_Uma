@@ -56,7 +56,7 @@ class App extends React.Component {
   //   this.getAssocPics({props.id});
   // }
   componentDidMount () {
-    const id = window.location.pathname.slice(1);
+    const id = window.location.pathname.slice(1) || 99;
 
     axios.get(`http://localhost:5002/${id}`)
       .then((results) => {
