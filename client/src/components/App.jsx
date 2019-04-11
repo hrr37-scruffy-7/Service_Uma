@@ -14,7 +14,7 @@ const SliderStyle = styled.div`
 
 //   `;
 
-class App extends React.Component {
+class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -154,6 +154,6 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default PhotoGallery;
 
 

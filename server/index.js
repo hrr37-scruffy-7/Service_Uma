@@ -43,3 +43,7 @@ const PORT = 5002;
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
+
+//make sure to sort the Mongo DB before rendering
+//use FRBO;
+//db.images.find().sort({imageId:1, imageIndex:1})
