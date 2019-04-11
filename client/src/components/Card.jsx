@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styles from './styles.css';
 import PropTypes from 'prop-types';
+
 
 const Card = ({property}) => {
   const {imageIndex, imagePath, imageId} = property;
   return (
-    <div id={`card-${imageIndex}`} className="card">
+    <div id={[styles.active, imageIndex].join('')} className={`${styles.card} ${[styles.activeCard, imageIndex].join('')}`}>
       <img src={imagePath} alt={imageId} height="412px"/>
     </div>
   );

@@ -11,11 +11,20 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
+      }, {
+        test: /\.css$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader',
+            options: {
+              modules: true
+            }}],
       }
     ]
   },
+  resolve: {extensions: ['*', '.js', '.jsx']},
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle-Uma.js',
     path: __dirname + '/public'
   },
   mode: 'development'
