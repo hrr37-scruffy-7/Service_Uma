@@ -9,11 +9,6 @@ const SliderStyle = styled.div`
   transform: ${props => `translateX(-${props.currentIndex * (100 / props.properties.length)}%)`};
   `;
 
-// const ButtonPrev = styled.button`
-
-
-//   `;
-
 class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
@@ -37,24 +32,10 @@ class PhotoGallery extends React.Component {
       },
       currentIndex: 0
     };
-    // this.getAssocPics = this.getAssocPics.bind(this);
   }
 
 
 
-  // getAssocPics(id){
-  //    return axios.get(`/images/${id}`)
-  //       .then((results) => {
-  //         this.setState({
-  //           properties: results.data,
-  //           property: results.data[0]
-  //         });
-  //         console.log(results.data);
-  //       });
-  // }
-  // componentDidMount () {
-  //   this.getAssocPics({props.id});
-  // }
   componentDidMount () {
     const id = window.location.pathname.slice(1) || 99;
 
@@ -148,7 +129,27 @@ class PhotoGallery extends React.Component {
             </div>
           </div>
         </div>
-
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_3_TabBar.png"></img>
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_4_Intro.png"></img>
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_5_Bedrooms.png"></img>
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_6_Owner.png"></img>
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_7_Amenities.png"></img>
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_8_Amenities2.png"></img>
+        </div>
+        <div>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_9_Amenities3.png"></img>
+        </div>
       </div>
     );
   }
