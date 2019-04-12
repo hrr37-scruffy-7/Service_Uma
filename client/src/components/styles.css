@@ -302,12 +302,12 @@
  }
 
 .activeCard2#active2 {
-  opacity: 1!important;
+  opacity: 1 !important;
   transform: scale(1);
 }
 
 .activeCard3#active3 {
-  opacity: 1;
+  opacity: 1 !important;
   transform: scale(1);
 }
 
