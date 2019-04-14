@@ -39,6 +39,11 @@ class PhotoGallery extends React.Component {
   componentDidMount () {
     const id = window.location.pathname.slice(1) || 99;
     const host = window.location.origin;
+    axios.get(`${host}`)
+      .then((results) => {
+        console.log(results.data);
+      });
+
     axios.get(`${host}/${id}`)
       .then((results) => {
         console.log(results.data);
@@ -60,7 +65,7 @@ class PhotoGallery extends React.Component {
     return (
       <div className={styles.app}>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_1_TopBar.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_1_TopBar.webp"></img>
         </div>
         <div>
           <div>
@@ -130,25 +135,25 @@ class PhotoGallery extends React.Component {
           </div>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_3_TabBar.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_3_TabBar.webp"></img>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_4_Intro.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_4_Intro2.webp"></img>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_5_Bedrooms.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_5_Bedrooms.webp"></img>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_6_Owner.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_6_Owner.webp"></img>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_7_Amenities.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_7_Amenities.webp"></img>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_8_Amenities2.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_8_Amenities2.webp"></img>
         </div>
         <div>
-          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_9_Amenities3.png"></img>
+          <img src="https://s3-us-west-1.amazonaws.com/frbo-images/FRBO_9_Amenities3.webp"></img>
         </div>
       </div>
     );

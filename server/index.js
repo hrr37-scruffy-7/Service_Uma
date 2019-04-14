@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('../database/index');
 const mongoose = require('mongoose');
+const path = require('path');
 var router = require('express').Router();
 let cors = require('cors');
 
@@ -20,10 +21,19 @@ app.use(express.static('public'));
 //   res.send('Hello World');
 // });
 
-//Get request for html page to render
+//Get request for html page to render at homepage
+
+app.get('/', (req, res)=> {
+  let getPath = path.join(__dirname, '..', 'public', 'index.html');
+  res.sendFile(getPath);
+});
+
+//Get request for html page to render at endpoint
+
 app.get('/:id', (req, res)=> {
-  console.log(req.params.id);
-  res.sendFile('/Users/umaabrami/desktop/hrr37/hrr37-FEC/Service_Uma/public/index.html');
+  let getPath = path.join(__dirname, '..', 'public', 'index.html');
+  console.log(getPath);
+  res.sendFile(getPath);
 });
 
 //Get request to get database images based on id
