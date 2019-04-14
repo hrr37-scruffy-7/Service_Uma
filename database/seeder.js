@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 var Image = require('../database');
+const password = require('./DBconfig');
 
-mongoose.connect('mongodb://localhost/frbo', { useNewUrlParser: true });
+var uri = `mongodb+srv://uabrami:${password.passwordMongodb}@fec-ymx0r.mongodb.net/frbo?retryWrites=true`;
+
+mongoose.connect(uri, { useNewUrlParser: true });
 
 var images = [
   new Image({

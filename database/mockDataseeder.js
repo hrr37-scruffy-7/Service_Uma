@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 var Image = require('../database');
 const faker = require('faker');
+const password = require('./DBconfig');
 
-mongoose.connect('mongodb://localhost/frbo', { useNewUrlParser: true });
+// var uri = 'mongodb+srv://uabrami:02bu08sf00syr%21@fec-ymx0r.mongodb.net/test?retryWrites=true';
+
+var uri = `mongodb+srv://uabrami:${password.passwordMongodb}@fec-ymx0r.mongodb.net/frbo?retryWrites=true`;
+
+mongoose.connect(uri, { useNewUrlParser: true });
 
 var images = [];
 var imageId = 1;

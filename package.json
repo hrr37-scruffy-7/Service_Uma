@@ -9,7 +9,7 @@
   },
   "scripts": {
     "react:dev": "webpack -d --watch",
-    "start:dev": "nodemon server/index.js -w database -w server",
+    "start:dev": "node server/index.js -w database -w server",
     "seed": "node database/seeder.js",
     "mockseed": "node database/mockDataseeder.js",
     "test": "jest",
