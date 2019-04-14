@@ -38,13 +38,13 @@ class PhotoGallery extends React.Component {
 
   componentDidMount () {
     const id = window.location.pathname.slice(1) || 99;
-
-    axios.get(`http://localhost:5002/${id}`)
+    const host = window.location.origin;
+    axios.get(`${host}/${id}`)
       .then((results) => {
         console.log(results.data);
       });
 
-    axios.get(`http://localhost:5002/images/${id}`)
+    axios.get(`${host}/images/${id}`)
       .then((results) => {
         this.setState({
           properties: results.data,

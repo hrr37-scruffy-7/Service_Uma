@@ -1,5 +1,10 @@
+
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/frbo', { useNewUrlParser: true });
+const password = require('./DBconfig');
+var uri = `mongodb+srv://uabrami:${password.passwordMongodb}@fec-ymx0r.mongodb.net/frbo?retryWrites=true`;
+
+
+mongoose.connect(uri, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
