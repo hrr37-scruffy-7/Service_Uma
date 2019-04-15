@@ -38,7 +38,8 @@ class PhotoGallery extends React.Component {
 
   componentDidMount () {
     const id = window.location.pathname.slice(1) || 99;
-    const host = window.location.origin;
+    // const host = window.location.origin;
+    const host = 'http://localhost:5002';
     axios.get(`${host}`)
       .then((results) => {
         console.log(results.data);
