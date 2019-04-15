@@ -1,7 +1,10 @@
 # Project Name
 Scruffy Leela Project - Uma Abrami
+
 > Project description
+
 Replicate a VRBO item page site. This repo has a dynamic photo gallery component and static photos for the other components.
+
 ## Related Projects
 
   - https://github.com/hrr37-scruffy-7
