@@ -15,12 +15,26 @@ Replicate a VRBO item page site. This repo has a dynamic photo gallery component
 
 ## Usage
 
-> App.jsx - The front-end get endpoints are set up for localhost 5002. To switch to a more generic endpoint, see commented out line 41.
+> App.jsx - The front-end get request hosts are set up for localhost 5002. To switch to a more generic host, see commented out line 41 and replace.
 
 > Database/index.js - The database file index.js is set up for a local database. To switch to connect to an Atlas cloudbased database, comment line 5, and uncomment lines 3 and 4, match line 4 to match your specific string provided by Atlas for connecting to an application, and add a DBconfig file in the database folder with the password. Here is a sample config file:
 
 >     exports.passwordMongodb = 'AtlasUserPassword';
+
+> Jest Tests: Some tests are set up (used CircleCI), but some are failing as I had not yet learned how to set up CircleCI to test a generic server instead of localhost. It is possible if you change the get requests as described above, the tests may pass.
+
 ## Requirements
+
+See package.JSON file and build process below for dependencies.
+
+Tech used:
+Database: MongoDB
+Front End: React
+Server: Node/Express
+Media files: Served from S3
+Testing: Jest + Enzyme
+Build: Circle/Travis CI
+Service Deployment: AWS Beanstalk
 
 App Entry: client/src/index.jsx
 App components: client/src/components/App.jsx ; client/src/components/Card.jsx
